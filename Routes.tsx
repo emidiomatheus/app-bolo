@@ -3,6 +3,7 @@ import { Home } from "./src/screens/Home";
 import { Shops } from "./src/screens/Shops";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Header } from "./src/components/Header";
+import { AddShop } from "./src/screens/AddShop";
 
 const Tab = createBottomTabNavigator();
 
@@ -23,12 +24,21 @@ export function Routes() {
                 ),
               }}
             />
-            <Tab.Screen
+            {/* <Tab.Screen
               name="Lojas"
               component={Shops}
               options={{
                 tabBarIcon: ({ color, size }) => (
                     <FontAwesome name="shopping-bag" color={color} size={size} />
+                )
+              }}
+            /> */}
+            <Tab.Screen
+              name="Adic. Loja"
+              component={AddShop}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                    <FontAwesome name="plus-square-o" color={color} size={size} />
                 )
               }}
             />

@@ -1,14 +1,9 @@
-import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
-import { styles } from "./styles";
-
-interface ButtonProps extends TouchableOpacityProps {
-    children: React.ReactNode
-}
+import { ButtonProps, StyledButton, StyledText } from "./styles";
 
 export function Button({ children, ...rest }: ButtonProps) {
     return (
-        <TouchableOpacity style={styles.button} {...rest}>
-            <Text style={styles.textButton}>{children}</Text>
-        </TouchableOpacity>
+        <StyledButton {...rest}>
+            <StyledText>{children}</StyledText>
+        </StyledButton>
     )
 }
